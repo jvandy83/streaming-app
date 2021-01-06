@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .sideBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        background: greenyellow;
+      }
+      .content {
+        position: relative;
+        margin-left: 300px;
+        z-index: 2;
+      }
+      .modal-body {
+        background: white;
+        margin: auto;
+        height: 30%;
+        width: 30%;
+      }
+      .modal {
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-body">
+        <h1>I am a Modal</h1>
+      </div>
+    </div>
+    <div class="sideBar">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut praesentium
+      provident fugiat at nam accusantium vero architecto exercitationem ipsam
+      pariatur!
+    </div>
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora laborum
+      ullam atque quisquam cum nesciunt iste accusantium porro itaque
+      perspiciatis, est laboriosam quis unde, beatae ab quas ut a praesentium
+      magnam dicta sed dolorem aut! Veniam ipsa pariatur in voluptatibus?
+    </div>
+  </body>
+</html>
