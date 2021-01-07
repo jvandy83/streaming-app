@@ -1,13 +1,21 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchStream } from '../../actions/index';
+import { fetchStream } from '../../actions';
 
 const StreamShow = (props) => {
   useEffect(() => {
     props.fetchStream(props.match.params.id);
   }, []);
   console.log(props);
-  return <div>{props.stream && props.stream.title}</div>;
+  if (!props.stream) {
+    return <div>Loading...</div>;
+  }
+  return (
+    <div>
+      <h1>{props.stream.title}</h1>
+      <h5>{props.stream.description}</h5>
+    </div>
+  );
 };
 
 const mapState = (state, ownProps) => {
